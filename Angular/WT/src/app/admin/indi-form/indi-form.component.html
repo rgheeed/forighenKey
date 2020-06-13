@@ -1,0 +1,178 @@
+
+
+
+          <app-navbar></app-navbar>
+
+        
+<form (ngSubmit)="registerIndividual()" #indiForm="ngForm">
+
+
+    <h5 class="mb-3 text-uppercase bg-light p-2"><i
+            class="mdi mdi-office-building mr-1"></i> Individual Info</h5>
+    <div class="row">
+
+
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nationalid">Individual ID</label>
+                <input type="text" [(ngModel)]="individual.nationalid" class="form-control" id="nationalid" 
+                name="nationalid"
+                placeholder="Enter Individual ID" required #nationalid="ngModel"
+                [class.is-invalid]="nationalid.invalid && nationalid.touched">
+
+            <small class="text-danger" [class.d-none]="nationalid.valid || nationalid.untouched">Individual ID is a required field</small>
+
+            </div>
+          </div>
+
+    
+
+
+
+
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstname">Individual First Name</label>
+                <input type="text" [(ngModel)]="individual.firstname" class="form-control" id="firstname" 
+                name="firstname"
+                placeholder="Enter Individual First Name" required #firstname="ngModel" 
+                [class.is-invalid]="firstname.invalid && firstname.touched">
+                <small class="text-danger" [class.d-none]="firstname.valid || firstname.untouched">First Name is a required field</small>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="mname">Individual Second Name</label>
+                <input type="text" [(ngModel)]="individual.mname" class="form-control" id="mname" 
+                name="mname"
+                placeholder="Enter Individual Second Name" required #mname="ngModel" 
+                [class.is-invalid]="mname.invalid && mname.touched">
+                <small class="text-danger" [class.d-none]="mname.valid || mname.untouched">Second Name is a required field</small>
+
+            </div>
+          </div>
+              
+
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="lastname">Individual Last Name</label>
+                <input type="text" [(ngModel)]="individual.lastname" class="form-control" id="lastname" 
+                name="lastname"
+                placeholder="Enter Individual Last Name" required #lastname="ngModel" 
+                 [class.is-invalid]="lastname.invalid && lastname.touched">
+                <small class="text-danger" [class.d-none]="lastname.valid || lastname.untouched">Last Name is a required field</small>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="email">Individual Email</label>
+                <input type="text" [(ngModel)]="individual.email" class="form-control" id="email" 
+                name="email"
+                placeholder="Enter Individual Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #email="ngModel" [class.is-invalid]="email.invalid && email.touched">
+
+                <div *ngIf="email.errors &&(email.invalid && email.touched)">
+                  <small class="text-danger" *ngIf="email.errors.required">Email is a required field</small>
+                  <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email</small>
+                </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="phoneNumber">Individual Phone Number</label>
+                <input type="text" [(ngModel)]="individual.phoneNumber" class="form-control" id="phoneNumber" 
+                name="phoneNumber"
+                placeholder="Enter Individual Phone Number" required #phoneNumber="ngModel">
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="address">Individual Address</label>
+                <input type="text" [(ngModel)]="individual.address" class="form-control" id="address" 
+                name="address"
+                placeholder="Enter Individual Address" required #address="ngModel"  
+                [class.is-invalid]="address.invalid && address.touched">
+                <small class="text-danger" [class.d-none]="address.valid || address.untouched">Address is a required field</small>
+
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="password">Individual Password</label>
+                <input type="password" [(ngModel)]="individual.password" class="form-control" id="password" 
+                name="password"
+                placeholder="Enter Individual Password" required #password="ngModel" 
+                [class.is-invalid]="password.invalid && password.touched">
+                <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is a required field</small>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="gender">Individual Gender</label>
+                <input type="text" [(ngModel)]="individual.gender" class="form-control" id="gender" 
+                name="gender"
+                placeholder="Enter Individual Gender" required #gender="ngModel">
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" (ngModel)="individual.password" class="form-control" id="cpassword" 
+                name="cpassword"
+                placeholder="Enter Confirm Password" required #cpassword="ngModel" 
+                [class.is-invalid]="cpassword.invalid && cpassword.touched">
+                <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">Password must be the same</small>
+
+            </div>
+          </div>
+
+        </div>
+        
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+                <label for="dob">Individual Date Of Birth</label>
+                <input type="date" [(ngModel)]="individual.dob" class="form-control" id="dob" 
+                name="dob"
+                placeholder="Enter Individual Date Of Birth" required #dob="ngModel" 
+                [class.is-invalid]="dob.invalid && dob.touched">
+                <small class="text-danger" [class.d-none]="dob.valid || dob.untouched">Date Of Birth is a required field</small>
+
+            </div>
+          </div>
+
+        
+
+          <button type="submit" [disabled]="!indiForm.form.valid" class="btn">Register</button>
+
+          </form>

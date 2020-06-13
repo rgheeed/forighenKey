@@ -1,0 +1,171 @@
+
+
+
+
+   <app-navbar></app-navbar>
+
+<body>
+  
+  <div class="row">
+    <div class="leftcolumn">
+      
+          
+      
+          <div id="id01" class="modal">
+           
+            
+            <div class="title">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <h2>My Education</h2>
+
+              <div class="card my-5">
+                <div class="card-body">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Education Degree</th>
+            
+            
+                        <th scope="col">University Name</th>
+                        <th scope="col"> University Email</th>
+                        
+                        
+                       
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End Date</th> 
+                        <th scope="col">Added By</th>
+                        
+                        
+                      
+            
+            
+                        
+                      </tr>
+                    </thead>
+                   
+                    
+                      </table>
+                      </div>
+              </div>
+              
+            </div> 
+          
+           </div>
+
+
+           <div id="id02" class="modal">
+            <div class="title">
+              <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <h2>My Experiences</h2>
+             
+
+              
+
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Position Name</th>
+
+
+            <th scope="col">Company Name</th>
+            <th scope="col"> Company Email</th>
+            
+            
+           
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th> 
+            <th scope="col">Added By</th>
+            
+            
+          
+
+
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let experience of experience">
+            <!-- <td>{{ experience.nationalid }}</td> -->
+            <td>{{ experience.eposition }}</td>
+            <td>{{ experience.companyname }}</td>
+            <td>{{ experience.companyemail }}</td>
+           
+           
+            <td>{{ experience.sdate | date }}</td>
+            <td>{{ experience.edate | date}}</td>
+            <td>{{ experience.addby }}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+
+
+            </div> 
+           </div>
+
+            </div>
+           </div>
+
+           <div id="id03" class="modal">
+            <div class="title">
+              <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <h2>TITLE HEADING3</h2>
+              <h5>Title description, Dec 7, 2017</h5>
+            </div> 
+           </div>
+
+           <div id="id04" class="modal">
+            <div class="title">
+              <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <h2>TITLE HEADING4</h2>
+              <h5>Title description, Dec 7, 2017</h5>
+            </div> 
+           </div>
+  
+         
+    </div>
+      
+
+
+
+     
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>My information</h2>
+        <p class="text-muted mb-2 font-13"><strong>Full Name :</strong> <span class="ml-2">{{name}} </span></p>
+
+  <p class="text-muted mb-2 font-13"><strong>Mobile :</strong><span class="ml-2">0592321224
+          </span></p>
+
+  <p class="text-muted mb-2 font-13"><strong>ID :</strong> <span
+          class="ml-2 ">1089582538</span></p>
+
+  <p class="text-muted mb-1 font-13"><strong>Career</strong> <span class="ml-2">Student</span></p>
+      </div>
+   
+
+     <div class=" card tab">
+      <button class="tablinks fakeimg" onclick="document.getElementById('id01').style.display='block'" >Education</button>
+      <button class="tablinks fakeimg" onclick="document.getElementById('id02').style.display='block'">Experiences</button>
+      <button class="tablinks fakeimg" onclick="document.getElementById('id03').style.display='block'">Courses</button>
+      <button class="tablinks fakeimg" onclick="document.getElementById('id04').style.display='block'">Recommendations</button>
+    </div>
+
+
+</div>
+</div>
+
+
+</body>
+
+  <div class="footer">
+    
+  </div> 
+
+
+
+

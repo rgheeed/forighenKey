@@ -1,0 +1,334 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="split left">
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" routerLink="/"><i class="fa fa-fw fa-home"></i></a>
+      <a onclick="document.getElementById('id04').style.display='block'" class="navbar-brand"><i
+          class="fa fa-fw fa-user"></i> Admin </a>
+    </nav>
+  </div>
+
+
+
+  <div class="centered">
+    <img src="../assets/wa.png">
+
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+
+
+
+    <div class="card text-center cardI rotate-animation">
+      <div class="card-body">
+        <h2 class="card-title "><strong>الأفــراد</strong></h2>
+        <h3>Individuals</h3>
+        <a onclick="document.getElementById('id01').style.display='block'" class="btn btn-outline-light ">Login</a>
+
+      </div>
+    </div>
+
+
+    <div class="loginForm">
+
+
+      <div id="id01" class="modal">
+
+        <form class="modal-content animate" #loginform= "ngForm" (ngSubmit)="loginIndi()">
+          <small class="text-danger">{{msg}}</small>
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
+
+          </div>
+
+          <div class="container">
+            <label for="email"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="email"  [(ngModel)]= "individual.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            #email="ngModel"
+            [class.is-invalid]="email.invalid && email.touched">
+
+
+            <div *ngIf="email.errors &&(email.invalid && email.touched)">
+              <small class="text-danger" *ngIf="email.errors.required">Email is a required field</small>
+              <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email</small>
+            </div>
+
+
+
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" [(ngModel)]= "individual.password" required #password="ngModel"
+            [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+
+
+            <button    type="submit">Login</button>
+            <button id=reg routerLink="/addIndi" type="submit">Register</button>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
+
+
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+
+    </div>
+
+
+
+    <div class="card text-center cardI rotate-animation">
+      <div class="card-body">
+        <h2 class="card-title"><strong>الشركـــات</strong></h2>
+        <h3>Companies</h3>
+        <a onclick="document.getElementById('id02').style.display='block'" class="btn btn-outline-light ">Login</a>
+
+      </div>
+    </div>
+
+
+
+    <div class="loginForm">
+
+
+      <div id="id02" class="modal">
+        <form class="modal-content animate" #loginform= "ngForm" (ngSubmit)="loginCompany()">
+          <small class="text-danger">{{msg}}</small>
+        
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
+
+          </div>
+
+          <div class="container">
+            <label for="email"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="email"  [(ngModel)]= "company.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            #email="ngModel"
+            [class.is-invalid]="email.invalid && email.touched">
+            <div *ngIf="email.errors &&(email.invalid && email.touched)">
+              <small class="text-danger" *ngIf="email.errors.required">Email is a required field</small>
+              <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email</small>
+            </div>
+
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" [(ngModel)]= "company.password" required #password="ngModel"
+            [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+
+
+            <button type="submit">Login</button>
+            <button id=reg routerLink="/addcompany" type="submit">Register</button>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'"
+              class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
+
+
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+
+    </div>
+
+
+
+    <div class="card text-center cardI rotate-animation">
+      <div class="card-body">
+        <h2 class="card-title"><strong>التعليــــم</strong></h2>
+        <h3>Education</h3>
+        <a onclick="document.getElementById('id03').style.display='block'" class="btn btn-outline-light ">Login</a>
+
+      </div>
+    </div>
+
+
+    <div class="loginForm">
+
+
+      <div id="id03" class="modal">
+
+        <form class="modal-content animate" #loginform= "ngForm" (ngSubmit)="loginEducation()">
+          <small class="text-danger">{{msg}}</small>
+          <div class="imgcontainer">
+
+            <span onclick="document.getElementById('id03').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
+
+          </div>
+
+          <div class="container">
+            <label for="email"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="email"  [(ngModel)]= "education.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            #email="ngModel"
+            [class.is-invalid]="email.invalid && email.touched">
+            <div *ngIf="email.errors &&(email.invalid && email.touched)">
+              <small class="text-danger" *ngIf="email.errors.required">Email is a required field</small>
+              <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email</small>
+            </div>
+
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" [(ngModel)]= "education.password" required #password="ngModel"
+            [class.is-invalid]="password.invalid && password.touched">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+
+
+
+            <button type="submit">Login</button>
+            <button id=reg routerLink="/addeducation" type="submit">Register</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id03').style.display='none'"
+              class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
+
+
+
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById('id03');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+
+
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--  
+
+<div class="loginForm">
+          
+      
+  <div id="id04" class="modal">
+
+    
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="uname"     required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="psw" required>
+         *ngIf="!isUserLoggedIn"  (click)="handleLogin()"  
+        <button   type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id04');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
+
+
+-->

@@ -1,0 +1,148 @@
+<app-navbar></app-navbar>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        
+        <button  routerLink="#"  class="btn btn-sm btn-outline-secondary" type="button">Add Experience</button>
+        <button   routerLink="#" class="btn btn-sm btn-outline-secondary" type="button">Display Individual</button>
+       
+      </form>
+    </nav>
+    
+  
+  
+  
+  </body> 
+
+<form (ngSubmit)="onSubmit()" #ExperienceForm="ngForm">
+
+
+  <h5 class="mb-3 text-uppercase bg-light p-2"><i class="mdi mdi-office-building mr-1"></i>Add Experience</h5>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+
+
+        <label for="eposition">Position Name</label>
+        <input type="text" [(ngModel)]="experience.eposition" class="form-control" id="eposition" 
+        name="eposition"
+          placeholder="Enter Position Name" required #eposition="ngModel">
+      </div>
+    </div>
+
+
+    
+
+
+    <div class="col-md-6">
+      <div class="form-group">
+
+    <label for="nationalid">Individual ID</label>
+    <input type="text" [(ngModel)]="experience.nationalid" class="form-control" id="nationalid" 
+    name="nationalid"
+      placeholder="Enter Individual ID" required #nationalid="ngModel">
+  </div>
+</div>
+
+
+
+<!-- <div class="col-md-6">
+  <div class="form-group">
+
+<label for="id">id </label>
+<input type="text" [(ngModel)]="experience.id" class="form-control" id="id" 
+name="id"
+  placeholder="Enter Company Refrence " required #id="ngModel">
+</div>
+</div> -->
+
+
+<div class="col-md-6">
+  <div class="form-group">
+
+<label for="sdate">Start Date</label>
+<input type="date" [(ngModel)]="experience.sdate" class="form-control" id="sdate" 
+name="sdate"
+  placeholder="Enter Start Date" required #sdate="ngModel">
+</div>
+</div>
+
+
+
+<!-- <div class="col-md-6">
+  <div class="form-group">
+<label for="edution">Education</label>
+<input type="text" [(ngModel)]="experience.edution" class="form-control" id="edution" 
+name="edution"
+  placeholder="Enter Education " required #edution="ngModel">
+</div>
+</div> -->
+
+
+<div class="col-md-6">
+  <div class="form-group">
+
+<label for="edate">End Date</label>
+<input type="date" [(ngModel)]="experience.edate" class="form-control" id="edate" 
+name="edate"
+  placeholder="Enter End Date" required #edate="ngModel">
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+  <div class="form-group">
+<label for="companyname">Company Name</label>
+<input type="text" [(ngModel)]="experience.companyname" class="form-control" id="companyname" 
+name="companyname"
+  placeholder="Enter Company Name" required #companyname="ngModel">
+</div>
+</div>
+
+
+
+
+<div class="col-md-6">
+  <div class="form-group">
+<label for="addby">Added By</label>
+<input type="text" [(ngModel)]="experience.addby" class="form-control" id="addby" 
+name="addby"
+  placeholder="Enter Add By" required #addby="ngModel">
+</div>
+</div>
+
+
+
+
+<!-- <div class="col-md-6">
+  <div class="form-group">
+<label for="refname">Refrence name </label>
+<input type="text" [(ngModel)]="experience.refname" class="form-control" id="refname" 
+name="refname"
+  placeholder="Enter Refrence Name" required #refname="ngModel">
+</div>
+</div> -->
+
+
+
+
+
+<div class="col-md-6">
+  <div class="form-group">
+<label for="companyemail">Company Email </label>
+<input type="text" [(ngModel)]="experience.companyemail" class="form-control" id="companyemail" 
+name="companyemail"
+  placeholder="Enter Company Email" required #companyemail="ngModel">
+</div>
+</div>
+
+
+</div>
+
+
+    
+
+  <button type="submit" [disabled]="!ExperienceForm.form.valid" class="btn">Submit</button>
+</form>

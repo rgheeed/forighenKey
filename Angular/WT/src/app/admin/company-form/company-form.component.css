@@ -1,0 +1,18 @@
+button {
+
+    border: 1px solid rgb(202, 191, 166);
+    color: rgb(48, 58, 74);
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: rgb(202, 191, 166);
+}
+
+
+
+.row{
+
+    margin: auto;
+}

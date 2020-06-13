@@ -1,0 +1,265 @@
+
+
+/* Split the screen in half*/
+.split {
+    height: 95%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color:rgb(247, 247, 247);
+    
+  }
+  
+  /* Control the right side */
+ .right {
+    right: 0;
+  
+    background-color:rgb(202, 191, 166);
+    
+    
+  } 
+  
+  /* If you want the content centered horizontally and vertically */
+   .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+    display: inline-block;
+    
+  } 
+
+
+  a {
+
+  
+    color: rgb(202, 191, 166);
+    
+    
+  }
+
+  .navbar a:hover {
+    background-color:white
+  }
+
+  i{
+    width: 35px;
+  }
+
+
+  .centered img {
+    width: 300px;
+    border-radius: 15%;
+    
+  }
+
+
+  /* border {
+    width: 300px;
+    border: 5px solid rgb(48, 58, 74);
+    padding: 50px;
+    text-align: center;
+    content: attr();
+    
+    
+    
+  } */
+
+
+  /* h4 {
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+    border: 5px solid rgb(48, 58, 74);   
+    margin: 30px;
+    
+  } */
+  
+  .cardI {
+    display: inline-block;
+    margin: 30px;
+    border: 5px solid rgb(48, 58, 74);  
+    background-color:rgb(48, 58, 74);
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(202, 191, 166);
+    width: 18rem;
+    box-shadow: 15px 10px 15px 10px rgba(0, 0, 0, 0.2);
+    
+    
+  }
+ 
+
+  /* a {
+    background-color: rgb(48, 58, 74);
+    color: rgb(202, 191, 166);
+    position: relative;
+  } */
+
+
+
+  .loginForm {font-family: Arial, Helvetica, sans-serif;
+    /* background-color:  rgb(48, 58, 74); */
+    text-align: center;
+  
+  }
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid rgb(247, 247, 247);
+      box-sizing: border-box;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      background-color: rgb(48, 58, 74);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+
+
+    #reg{
+      background-color: rgb(202, 191, 166);
+    }
+    
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: rgb(202, 191, 166)
+    }
+    
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+    
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+    
+    .container {
+      padding: 16px;
+    }
+    
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+      
+    @keyframes animatezoom {
+      from {transform: scale(0)} 
+      to {transform: scale(1)}
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }
+
+
+/* 
+    h2 {
+      width: 150px;
+      height: 100px;
+      text-align: center;
+  } */
+    .rotate-animation div:hover{
+      animation: fullrotate 1s ease-in-out;
+  }
+  
+  @keyframes fullrotate {
+      0% {
+          transform: rotateY(0deg);
+          background-color: rgb(247, 247, 247)
+      }
+      50% {
+          transform: rotateY(90deg);
+          background-color: rgb(48, 58, 74)
+      }
+      100% {
+          transform: rotateY(0deg);
+          background-color:rgb(247, 247, 247)
+      }
+  }

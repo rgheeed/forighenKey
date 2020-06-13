@@ -1,0 +1,55 @@
+<app-admin-page></app-admin-page>
+
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Individual First Name</th>
+            <th scope="col">individual Second Name</th>
+            <th scope="col">individual Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Address</th>
+            <th scope="col">Password</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Statu</th>
+            <th scope="col">Skills</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Attachment</th>
+            <th scope="col">Action</th>
+            
+          
+
+
+            
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let individual of individual">
+            <td>{{ individual.nationalid }}</td>
+            <td>{{ individual.firstname }}</td>
+            <td>{{ individual.mname }}</td>
+            <td>{{ individual.lastname }}</td>
+            <td>{{ individual.email}}</td>
+            <td>{{ individual.phoneNumber }}</td>
+            <td>{{ individual.address }}</td>
+            <td>{{ individual.password }}</td>
+            <td>{{ individual.gender }}</td>
+            <td>{{ individual.status }}</td>
+            <td>{{ individual.skills }}</td>
+            <td>{{ individual.dob | date}}</td>
+            <td>{{ individual.attachments }}</td>
+          
+             <td><button routerLink='/indiList' (click)="deleteIndividual(individual.nationalid)" class="btn btn-outline-danger">Delete</button></td> -->
+          </tr>
+        </tbody>
+
+        </table>
+        <body>
+        <button routerLink='/indiList'   (click)="deleteallEmployee()" class="btn btn-danger">Delete all</button>
+        </body>
+        </div>
+        </div>
